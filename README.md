@@ -6,6 +6,8 @@
 
 ### 小游戏开发
 
+注：不推荐使用控制台去写过于丰富的图形界面的呈现，会不方便。同时，这类问题也难以解决： #24
+
 [pygame指引 （待补充）](./starter-pygame.md)
 
 [unity&unreal指引 （待补充）](./starter-unity&unreal.md)
@@ -36,7 +38,7 @@ TODO...待补充
 
 c# winform：winform是最简单、最傻瓜式的。只需要拖控件、写代码，就可以完成想要的功能。 [Winform指引](./starter-winform.md)
 
-c/c++使用windows api开发：效率极端低下，不推荐。
+c/c++使用windows api开发：效率极端低下，不推荐。助教也对这种开发模式不熟，难以回答 #23 #25 #29 这类的问题
 
 qt：有基础的可以尝试。 [QT指引 (待补充)](./starter-QT.md)
 
