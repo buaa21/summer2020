@@ -2,16 +2,6 @@ import json
 import sqlite3
 import datetime
 
-# read username reference
-username_ref = dict()
-with open("username-reference.txt", 'r', encoding='utf8') as f:
-    for line in f.readlines():
-        [name, username] = line.split()
-        username_ref[username] = name
-username_list = list(username_ref.keys())
-
-print(username_list)
-
 # read json
 with open('data_comments.json', 'r', encoding='utf8') as f:
     comments = json.load(f)
@@ -39,6 +29,21 @@ conn.executescript(
     )
     '''
 )
+conn.executescript(
+    '''
+    CREATE TABLE collaborators (
+        username TEXT NOT NULL,
+        name TEXT NOT NULL
+    )
+    '''
+)
+
+# load collaborators
+with open("username-reference.txt", 'r', encoding='utf8') as f:
+    for line in f.readlines():
+        [name, username] = line.split()
+        conn.execute("INSERT INTO collaborators (username,name) VALUES (?, ?)",
+                     [username, name])
 
 # save into sqlite
 for c in comments:
@@ -54,16 +59,17 @@ t_start = datetime.date(2020, 8, 27) - \
     datetime.timedelta(hours=8)  # beijing to utc
 t_end = t_start + datetime.timedelta(days=1)
 
-cnt2 = conn.execute(
-    "select count(*) from comments where created_at > ? and created_at < ?", (t_start, t_end)).fetchone()[0]
-print(cnt2)
+# cnt2 = conn.execute(
+#     "select count(*) from comments where created_at > ? and created_at < ?", (t_start, t_end)).fetchone()[0]
+# print(cnt2)
 
 r = conn.execute('''
-    select A.username, count(*) as cnt from (select username, issue_url from comments group by username, issue_url) A
-    group by A.username order by cnt desc ''').fetchall()
+    select
+        A.username,
+        (select name from collaborators C where C.username=A.username limit 1) as name,
+        count(*) as cnt
+    from (select username, issue_url from comments where created_at between ? and ? and username in (select username from collaborators) group by username, issue_url) A
+    group by A.username order by cnt desc ''', (t_start, t_end)).fetchall()
 
-r = [x for x in r if x[0] in username_ref]
-
-for [username, cnt] in r:
-    name = username_ref[username]
+for [username, name, cnt] in r:
     print(f"{username} {name} {cnt}")
