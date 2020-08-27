@@ -2,6 +2,16 @@ import json
 import sqlite3
 import datetime
 
+# read username reference
+username_ref = dict()
+with open("username-reference.txt", 'r', encoding='utf8') as f:
+    for line in f.readlines():
+        [name, username] = line.split()
+        username_ref[username] = name
+username_list = list(username_ref.keys())
+
+print(username_list)
+
 # read json
 with open('data_comments.json', 'r', encoding='utf8') as f:
     comments = json.load(f)
@@ -51,4 +61,9 @@ print(cnt2)
 r = conn.execute('''
     select A.username, count(*) as cnt from (select username, issue_url from comments group by username, issue_url) A
     group by A.username order by cnt desc ''').fetchall()
-print(r)
+
+r = [x for x in r if x[0] in username_ref]
+
+for [username, cnt] in r:
+    name = username_ref[username]
+    print(f"{username} {name} {cnt}")
