@@ -4,10 +4,30 @@
 
 ## 开发指引
 
-### 网站开发
-
-
 ### 小游戏开发
+
+[pygame指引 （待补充）](./starter-pygame.md)
+
+TODO...等待有经验的助教补充
+
+
+### 网站开发
+- 无基础的同学，建议使用前后端不分离的模式。
+- 有基础的同学，可以考虑前后端分离的模式，前端考虑vue。
+
+初学者框架推荐：
+- python django [django指引](./starter-django.md)
+- python flask
+
+初学者不推荐：
+- java spring
+- c# Asp.NetCore
+
+理由：过于工程化，不适合初学者
+
+
+### 小程序开发
+TODO...待补充
 
 
 ### 桌面程序开发
