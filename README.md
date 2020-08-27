@@ -36,7 +36,9 @@ TODO...待补充
 
 c# winform：winform是最简单、最傻瓜式的。只需要拖控件、写代码，就可以完成想要的功能。 [Winform指引](./starter-winform.md)
 
-c/c++/qt：这些语言用来开发桌面app，效率会低下，除非有基础。 [QT指引 (待补充)](./starter-QT.md)
+c/c++使用windows api开发：效率极端低下，不推荐。
+
+qt：有基础的可以尝试。 [QT指引 (待补充)](./starter-QT.md)
 
 java swing：swing的开发没有winform傻瓜式，建议有基础的同学尝试。
 
