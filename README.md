@@ -8,6 +8,8 @@
 
 [pygame指引 （待补充）](./starter-pygame.md)
 
+[unity&unreal指引 （待补充）](./starter-unity&unreal.md)
+
 TODO...等待有经验的助教补充
 
 
@@ -34,7 +36,7 @@ TODO...待补充
 
 c# winform：winform是最简单、最傻瓜式的。只需要拖控件、写代码，就可以完成想要的功能。 [Winform指引](./starter-winform.md)
 
-c/c++/qt：这些语言用来开发桌面app，效率会低下，除非有基础。
+c/c++/qt：这些语言用来开发桌面app，效率会低下，除非有基础。 [QT指引 (待补充)](./starter-QT.md)
 
 java swing：swing的开发没有winform傻瓜式，建议有基础的同学尝试。
 
