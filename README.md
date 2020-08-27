@@ -16,7 +16,7 @@ TODO...等待有经验的助教补充
 - 有基础的同学，可以考虑前后端分离的模式，前端考虑vue。
 
 初学者框架推荐：
-- python django [django指引](./starter-django.md)
+- python django [django指引（待补充）](./starter-django.md)
 - python flask
 
 初学者不推荐：
