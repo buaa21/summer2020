@@ -3,6 +3,9 @@
 TODO:
 
 【写在前面】关于pygame，pymunk以及包括其他语言在内的组件，解决问题的最好方法其实是去翻官方文档，一般都包含了所有方法的详细说明以及实例
+pymunk:http://www.pymunk.org/en/latest/pymunk.html#pymunk-package
+pygame:https://www.pygame.org/docs/
+pyglet:https://pyglet.readthedocs.io/en/latest/
 
 首先安装python，安装好后终端输入 python 会显示当前python版本。
 
