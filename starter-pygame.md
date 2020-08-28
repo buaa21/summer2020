@@ -48,3 +48,6 @@ https://www.pygame.org/docs/
                       sys.exit()# 退出系统
 
               pygame.display.update()# 绘制屏幕内容
+
+
+最后，如果想尝试又不知道如何开始可以多跟助教沟通。
