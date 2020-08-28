@@ -19,6 +19,7 @@
 注：不推荐使用控制台去写过于丰富的图形界面的呈现，会不方便。同时，这类问题也难以解决： #24
 
 [pygame指引](./starter-pygame.md)
+
 关于pymunk：貌似有不少同学都在利用pygame做游戏的时候希望使用pymunk建立物理模型，如果有较好的解决「pymunk和pygame结合」或者是「鼠标键盘控制pymunk」两个技术问题的欢迎通过issue与大家分享
 
 [unity&unreal指引 （待补充）](./starter-unity&unreal.md)
