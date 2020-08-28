@@ -18,7 +18,7 @@
 
 注：不推荐使用控制台去写过于丰富的图形界面的呈现，会不方便。同时，这类问题也难以解决： #24
 
-[pygame指引 （待补充）](./starter-pygame.md)
+[pygame指引](./starter-pygame.md)
 
 [unity&unreal指引 （待补充）](./starter-unity&unreal.md)
 
